@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivity"
+    android:theme="@style/SplashTheme"
+    android:background="@drawable/gradient_background">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="216dp"
+        android:layout_height="152dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="58dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="41dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/montserrat"
+        android:text="“Hidup yang tidak dipertaruhkan tidak akan pernah dimenangkan”"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="311dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/tvEmail"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rectangle"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="6dp"
+        android:gravity="start|center"
+        android:height="60dp"
+        android:padding="6dp"
+        android:hint="Email"
+        android:textColor="#663F4043"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="311dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="366dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/tvPassword"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rectangle"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="6dp"
+        android:gravity="start|center"
+        android:height="60dp"
+        android:padding="6dp"
+        android:hint="Password"
+        android:textColor="#663F4043"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:id="@+id/tvForgetPassword"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="424dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Lupa password ?"
+        android:layout_marginEnd="31dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp" />
+    <Button
+        android:layout_width="108dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="459dp"
+        android:layout_height="43dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rectangle2"
+        android:text="Masuk"
+        android:id="@+id/btnMasuk"
+        android:textSize="15sp"
+        android:fontFamily="@font/montserrat"
+        />
+
+</RelativeLayout>

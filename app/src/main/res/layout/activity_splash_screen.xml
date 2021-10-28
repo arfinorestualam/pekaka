@@ -6,9 +6,24 @@
     android:background="@drawable/gradient_background"
     tools:context=".SplashScreen">
 
+    <TextView
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/logo"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="41dp"
+        android:fontFamily="@font/montserrat"
+        android:text="“Hidup yang tidak dipertaruhkan tidak akan pernah dimenangkan”"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="375dp"
         android:layout_height="822dp"
-        android:src="@drawable/logo"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo" />
 </RelativeLayout>
