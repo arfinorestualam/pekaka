@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PeluangKerja</string>
+    <string name="belum_punya_akun">Belum punya akun ? daftar <b><u>disini</u></b></string>
+    <string name="title_home"><font fgcolor='#5BABD9'>Beranda</font></string>
+    <string name="title_dashboard"><font fgcolor='#5BABD9'>null</font>></string>
+    <string name="title_notifications"><font fgcolor='#5BABD9'>null</font></string>
+    <string name="title_profile"><font fgcolor='#5BABD9'>null</font></string>
+
+
 </resources>

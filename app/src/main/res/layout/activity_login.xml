@@ -19,13 +19,13 @@
         android:src="@drawable/logo" />
 
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_marginStart="41dp"
         android:layout_marginTop="220dp"
         android:layout_marginEnd="41dp"
-        android:layout_centerInParent="true"
         android:fontFamily="@font/montserrat"
         android:text="“Hidup yang tidak dipertaruhkan tidak akan pernah dimenangkan”"
         android:textAlignment="center"
@@ -67,30 +67,122 @@
         android:textSize="15sp"/>
 
     <TextView
-        android:layout_width="200dp"
         android:id="@+id/tvForgetPassword"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
         android:layout_marginStart="211dp"
         android:layout_marginTop="424dp"
         android:fontFamily="@font/montserrat"
         android:text="Lupa password ?"
-        android:layout_marginEnd="31dp"
         android:textColor="#FFFFFF"
-        android:layout_alignParentRight="true"
         android:textSize="18sp" />
-    <Button
-        android:layout_width="108dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="459dp"
-        android:layout_height="43dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/rectangle2"
-        android:text="Masuk"
+
+    <com.google.android.material.button.MaterialButton
+        android:backgroundTint="#2CBEFF"
         android:id="@+id/btnMasuk"
-        android:textSize="15sp"
+        android:layout_width="108dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="459dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+        app:cornerRadius="8dp"
         android:fontFamily="@font/montserrat"
+        android:text="Masuk"
+        android:textSize="15sp" />
+    <View
+        android:layout_width="135dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="523dp"
+        android:layout_marginStart="32dp"
+        android:layout_alignParentStart="true"
+        android:background="@color/white_imperfect"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atau"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="515dp"
+        android:textSize="12sp"
+        android:layout_marginStart="172dp"
+        android:textColor="#FFFFFF"/>
+
+    <View
+        android:layout_width="137.5dp"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="205.5dp"
+        android:layout_marginTop="523dp"
+        android:background="@color/white_imperfect" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="311dp"
+        android:layout_marginTop="548dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#4460A0"
+        android:drawableLeft="@drawable/facebook"
+        android:gravity="start|center"
+        android:text="Masuk dengan Facebook"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        app:cornerRadius="6dp"
+        android:id="@+id/btnFacebook"
         />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="311dp"
+        android:layout_marginTop="594dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#FFFFFF"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/google"
+        android:gravity="start|center"
+        android:text="Masuk dengan Google"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat"
+        app:cornerRadius="6dp"
+        android:id="@+id/btnGoogle"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="311dp"
+        android:layout_marginTop="640dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#007EBB"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/linkein"
+        android:gravity="start|center"
+        android:text="Masuk dengan linked in"
+
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat"
+        app:cornerRadius="6dp"
+        android:id="@+id/btnLinkedin"
+        />
+    <TextView
+        android:id="@+id/tvDaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="710dp"
+        android:textSize="12sp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#FFFFFF"
+        android:text="@string/belum_punya_akun"/>
+
+
+
+
+
+
 
 </RelativeLayout>
