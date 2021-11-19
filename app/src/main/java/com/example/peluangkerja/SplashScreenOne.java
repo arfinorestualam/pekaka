@@ -7,18 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
-public class loginActivity extends AppCompatActivity {
-    Button btnlogin, btnFacebook, btnGmail, btnLinkedin;
+public class SplashScreenOne extends AppCompatActivity {
+    Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        btnlogin = findViewById(R.id.btnMasuk);
-
-        btnlogin.setOnClickListener(view -> {
-            Intent i = new Intent(loginActivity.this, MainActivity.class);
+        setContentView(R.layout.activity_splash_screen_one);
+        btnNext = findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(view -> {
+            Intent i = new Intent(this, SplashScreenTwo.class);
             startActivity(i);
         });
     }

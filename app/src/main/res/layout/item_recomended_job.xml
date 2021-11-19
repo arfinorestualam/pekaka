@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="168dp"
+    android:layout_marginEnd="16dp"
+    tools:context=".detailJob"
+    android:id="@+id/lvRecomend"
+    android:theme="@style/SplashTheme"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="141dp"
+        android:layout_height="168dp"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="141dp"
+            android:layout_height="111dp"
+            android:id="@+id/imgJob"
+            android:scaleType="fitCenter"
+            android:background="@drawable/imgjob"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#0277BD"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:id="@+id/tvJob"
+            android:text="Socialmedia Specialist"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#3F4043"
+            android:textSize="6sp"
+            android:textStyle="bold"
+            android:id="@+id/tvCompany"
+            android:text="PT. Makarona Indonesia"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#000000"
+            android:textSize="5sp"
+            android:id="@+id/tvPaid"
+            android:text="Gaji Rp. 4.000.000 - 6.000.000"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textColor="#3F4043"
+                android:textSize="5sp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/tvCity"
+                android:text="Kab. Bogor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textColor="#000000"
+                android:textSize="5sp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvTimePost"
+                android:text="20 menit yang lalu"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

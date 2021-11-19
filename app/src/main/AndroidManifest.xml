@@ -32,8 +32,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PeluangKerja">
         <activity
+            android:name=".SplashScreenThree"
+            android:exported="false"
+            android:theme="@style/SplashTheme"/>
+        <activity
+            android:name=".SplashScreenTwo"
+            android:exported="false"
+            android:theme="@style/SplashTheme"/>
+        <activity
+            android:name=".SplashScreenOne"
+            android:exported="false"
+            android:theme="@style/SplashTheme"/>
+        <activity
             android:name=".detailJob"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/MainTheme" />
         <activity
             android:name=".loginActivity"
             android:exported="false"
@@ -50,7 +63,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/MainTheme" />
     </application>
 
 </manifest>

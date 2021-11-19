@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SplashScreen extends AppCompatActivity {
-    final private static int SPLASH_TIME_OUT = 100;
+    final private static int SPLASH_TIME_OUT = 1000;
     private static final int PERMISSION_ALL = 0;
 
     @Override
@@ -29,7 +29,7 @@ public class SplashScreen extends AppCompatActivity {
     private void displaySplashScreen(){
         Handler handler = new Handler();
         Runnable runnable = () -> {
-            Intent intent = new Intent(SplashScreen.this, loginActivity.class);
+            Intent intent = new Intent(SplashScreen.this, SplashScreenOne.class);
             startActivity(intent);
             finish();
         };

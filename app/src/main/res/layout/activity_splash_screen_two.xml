@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenTwo"
+    android:background="#5BAAD9">
+    <ImageView
+        android:id="@+id/imgword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="97dp"
+        android:src="@drawable/word_splashscrenn_2"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:backgroundTint="#F2F2F2"
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="10dp"
+        app:strokeColor="@color/white"
+        android:layout_alignParentEnd="true"
+        app:strokeWidth="2dp"
+        android:textColor="#5BAAD9"
+        android:layout_below="@+id/imgword"
+        app:cornerRadius="30dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Next"
+        android:textSize="15sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginEnd="99dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnNext"
+        android:src="@drawable/splash_cartoon_2"
+        android:foregroundGravity="right"/>
+
+</RelativeLayout>

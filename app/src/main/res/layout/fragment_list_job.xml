@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    style="@style/Theme.AppCompat.DayNight.NoActionBar"
+    tools:context=".listJobFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:fitsSystemWindows="true"
+       >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/halfmoon"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginBottom="20dp"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="15dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="bottom"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_notifications"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:layout_collapseMode="pin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageButton
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@android:color/transparent"
+                            android:clickable="true"
+                            android:tint="#666666"
+                            app:srcCompat="@drawable/ic_search" />
+
+                        <EditText
+                            android:id="@+id/et_search"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:hint="Temukan profesi impianmu"
+                            android:imeOptions="actionSearch"
+                            android:maxLines="1"
+                            android:singleLine="true">
+
+                            <requestFocus />
+
+                        </EditText>
+
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_width="wrap_content"
+        android:id="@+id/rvListJob"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:scrollbars="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp" />
+
+</RelativeLayout>
