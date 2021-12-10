@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class JobDatas {
     private static String[] job = {
             "Socialmedia Specialist",
-            "Socialmedia Specialist",
-            "Socialmedia Specialist",
-            "Socialmedia Specialist",
-            "Socialmedia Specialist",
-            "Socialmedia Specialist",
+            "SPV Produksi",
+            "Photograper",
+            "Customer Service",
+            "Videographer (Freelance)",
+            "Resto Ayam Sarjana",
             "Socialmedia Specialist",
             "Socialmedia Specialist",
             "Socialmedia Specialist",
@@ -18,25 +18,25 @@ public class JobDatas {
 
     private static String[] company = {
             "PT. Makarona Indonesia",
+            "Resto Ayam Sarjana",
+            "Millionperspective Corporate",
+            "Millionperspective Corporate",
+            "PT. Millionperspective",
             "PT. Makarona Indonesia",
             "PT. Makarona Indonesia",
             "PT. Makarona Indonesia",
-            "PT. Makarona Indonesia",
-            "PT. Makarona Indonesia",
-            "PT. Makarona Indonesia",
-            "PT. Makarona Indonesia",
-            "PT. Makarona Indonesia",
+            "Resto Ayam Sarjana",
             "PT. Makarona Indonesia",
     };
 
     private static String[] salary = {
             "Gaji Rp. 3.000.000 - 5.000.000",
-            "Gaji Rp. 3.000.000 - 5.000.000",
-            "Gaji Rp. 3.000.000 - 5.000.000",
-            "Gaji Rp. 3.000.000 - 5.000.000",
-            "Gaji Rp. 3.000.000 - 5.000.000",
-            "Gaji Rp. 3.000.000 - 5.000.000",
-            "Gaji Rp. 3.000.000 - 5.000.000",
+            "Gaji Rp. 4.000.000 - 6.000.000",
+            "Gaji Rp. 4.000.000 - 6.000.000",
+            "Gaji Rp. 4.000.000 - 6.000.000",
+            "Gaji Rp. 4.000.000 - 6.000.000",
+            "Gaji Rp. 4.000.000 - 6.000.000",
+            "Gaji Rp. 4.000.000 - 6.000.000",
             "Gaji Rp. 3.000.000 - 5.000.000",
             "Gaji Rp. 3.000.000 - 5.000.000",
             "Gaji Rp. 3.000.000 - 5.000.000"
@@ -70,16 +70,15 @@ public class JobDatas {
 
     private static int[] jobImage = {
             R.drawable.imgjob,
+            R.drawable.img_logoayamsarjana,
+            R.drawable.img_million,
+            R.drawable.img_million,
+            R.drawable.img_logoayamsarjana,
+            R.drawable.img_million,
             R.drawable.imgjob,
+            R.drawable.img_logoayamsarjana,
+            R.drawable.img_million,
             R.drawable.imgjob,
-            R.drawable.imgjob,
-            R.drawable.imgjob,
-            R.drawable.imgjob,
-            R.drawable.imgjob,
-            R.drawable.imgjob,
-            R.drawable.imgjob,
-            R.drawable.imgjob,
-
     };
 
     public static ArrayList<Jobs> getJobList() {
