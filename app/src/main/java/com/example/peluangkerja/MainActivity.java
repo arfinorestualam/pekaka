@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.navigation_notifications:
                     fragment = new listJobFragment();
-
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.nav_host_fragment,fragment,fragment.getClass().getSimpleName())
                             .commit();
@@ -43,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.nav_host_fragment,fragment,fragment.getClass().getSimpleName())
                             .commit();
+                    return true;
 
                 case R.id.navigation_profile:
                     fragment = new profileFragment();

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="age">
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="categoryprofile">
+        <item>Select Category</item>
+        <item>Banking</item>
+        <item>Beauty / Fashion</item>
+        <item>Business Development</item>
+        <item>Construction / Real Estate</item>
+        <item>Designer</item>
+        <item>Education</item>
+        <item>Electronics / Technical</item>
+        <item>Engineering</item>
+        <item>Executive / CEO</item>
+        <item>Food and Beverages</item>
+        <item>Goverment / Administration</item>
+        <item>Grapic Design</item>
+        <item>Hospital / Airline</item>
+        <item>Human Resources</item>
+        <item>Industrials and Manufecturing</item>
+        <item>Information Technology</item>
+        <item>Insurance</item>
+        <item>ITC</item>
+        <item>Legal / Lawyers</item>
+        <item>Marketing and Advertising</item>
+        <item>Medical and Healthcare</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="experienceprofile">
+        <item>0 - 1 Years</item>
+        <item>1 - 2 Years</item>
+        <item>2 - 5 Years</item>
+        <item>5 - 10 Years</item>
+        <item>10 - 15 Years</item>
+        <item>15+ Years</item>
+    </string-array>
+
+    <string-array name="salary">
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
+        <item>3500</item>
+        <item>4000</item>
+        <item>4500</item>
+        <item>5000</item>
+        <item>5500</item>
+        <item>6000</item>
+        <item>6500</item>
+        <item>7000</item>
+        <item>7500</item>
+        <item>8000</item>
+        <item>8500</item>
+        <item>9000</item>
+        <item>9500</item>
+    </string-array>
+
+    <string-array name="nationaly">
+        <item>Indonesia</item>
+        <item>Singapur</item>
+    </string-array>
+
+    <string-array name="state">
+        <item>Baluchistan</item>
+        <item>Federal Capital Area</item>
+        <item>Federally administered Tribal</item>
+        <item>North-West Frontier</item>
+        <item>Northern Areas</item>
+        <item>Punjab</item>
+        <item>Sind</item>
+
+    </string-array>
+
+    <string-array name="city">
+        <item>Jakarta</item>
+        <item>Bandung</item>
+    </string-array>
+
+
+</resources>

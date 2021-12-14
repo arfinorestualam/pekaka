@@ -1,64 +1,108 @@
 package com.example.peluangkerja;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link profileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+
 public class profileFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Spinner spAge,spCategory,spExperience, spCurentSalary,spExpecSalary,spNationaly,spCountry,spState,
+            spCity;
+    private TextView etDate;
+    private View fragmentView;
+    private FragmentActivity myContext;
 
     public profileFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment profileFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static profileFragment newInstance(String param1, String param2) {
-        profileFragment fragment = new profileFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        fragmentView = inflater.inflate(R.layout.fragment_profile, container, false);
+        initComponent();
+        return fragmentView;
     }
+
+    private void initComponent(){
+        spAge = fragmentView.findViewById(R.id.spAge_profile);
+        spCategory = fragmentView.findViewById(R.id.spCategory_profile);
+        spExperience = fragmentView.findViewById(R.id.spExperience_profile);
+        spCurentSalary = fragmentView.findViewById(R.id.spSalaryCurent_profile);
+        spExpecSalary = fragmentView.findViewById(R.id.spSalaryExpected_profile);
+        spNationaly = fragmentView.findViewById(R.id.spNationality_profile);
+        spCountry = fragmentView.findViewById(R.id.spCountry_profile);
+        spState = fragmentView.findViewById(R.id.spState_profile);
+        spCity = fragmentView.findViewById(R.id.spCity_profile);
+        etDate = fragmentView.findViewById(R.id.etDateOfBirth_Profile);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.age)), spAge);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.categoryprofile)), spCategory);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.experienceprofile)), spExperience);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.salary)), spCurentSalary);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.salary)), spExpecSalary);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.nationaly)), spNationaly);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.nationaly)), spCountry);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.state)), spState);
+        setSpinner(Arrays.asList(getResources().getStringArray(R.array.city)), spCity);
+        etDate.setOnClickListener(view -> {
+            Datepicker(etDate);
+        });
+    }
+
+    public void setSpinner(List<?> listItem, Spinner spinner) {
+        ArrayAdapter<?> spinnerAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, listItem);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(spinnerAdapter);
+    }
+
+    public void Datepicker(TextView datetime) {
+        final Calendar cldr = Calendar.getInstance();
+        final int day = cldr.getActualMinimum(Calendar.DAY_OF_MONTH);
+        final int month = cldr.get(Calendar.MONTH);
+        final int year = cldr.get(Calendar.YEAR);
+        DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
+                @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                String newDate = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
+
+                Date date = null;
+                try {
+                    date = sdf.parse(newDate);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                String formattedTime = sdf.format(date);
+                //tanggalString += formattedTime;
+                datetime.setText(formattedTime);
+            }
+        }, year, month, day);
+        datePickerDialog.show(getActivity().getFragmentManager(), "Datepickerdialog");
+    }
+
 }

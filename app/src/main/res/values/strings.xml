@@ -4,9 +4,32 @@
     <string name="title_home"><font fgcolor='#5BABD9'>Beranda</font></string>
     <string name="title_dashboard"><font fgcolor='#5BABD9'>Jobs</font></string>
     <string name="title_notifications"><font fgcolor='#5BABD9'>null</font></string>
-    <string name="title_profile"><font fgcolor='#5BABD9'>null</font></string>
+    <string name="title_profile"><font fgcolor='#5BABD9'>Profile</font></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    profilefragment-->
+    <string name="personalinformasi">Personal Information</string>
+    <string name="profilepicture">Profile Picture</string>
+    <string name="choosefile">Choose File</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="dateofbirth">Date Of Birth</string>
+    <string name="age">Age</string>
+    <string name="categoty">Category</string>
+    <string name="yourtitle">Your Title</string>
+    <string name="experience">Experience</string>
+    <string name="skill">Skill</string>
+    <string name="currentsalary">Current Salary(USD)</string>
+    <string name="expectedsalary">Expected Salary(USD)</string>
+    <string name="nationality">Nationality</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="fulladdres">Full Addres</string>
+    <string name="btnupdate">Update</string>
+    <string name="education">Education</string>
 
 
 </resources>
