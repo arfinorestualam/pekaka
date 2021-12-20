@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:theme="@style/SplashTheme"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/jobtittle"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/etJobtittle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:height="60dp"
+                android:background="@drawable/rectangle"
+                android:drawablePadding="6dp"
+                android:drawableTint="#3F4043"
+                android:hint="@string/jobtittle"
+                android:padding="6dp"
+                android:textColorHint="#663F4043"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/company"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/etCompany"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:height="60dp"
+                android:background="@drawable/rectangle"
+                android:drawablePadding="6dp"
+                android:drawableTint="#3F4043"
+                android:hint="@string/company"
+                android:padding="6dp"
+                android:textColorHint="#663F4043"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/country"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <Spinner
+                android:id="@+id/spCountry"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:height="60dp"
+                android:background="@drawable/rectangle"
+                android:drawablePadding="6dp"
+                android:drawableTint="#3F4043"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Start Month"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   android:layout_marginStart="10dp"
+                   android:layout_weight="1"/>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Start Year"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   android:layout_weight="1"/>
+
+           </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <Spinner
+                    android:id="@+id/spStartYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:height="60dp"
+                    android:background="@drawable/rectangle"
+                    android:drawablePadding="6dp"
+                    android:drawableTint="#3F4043"
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/spStartYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:height="60dp"
+                    android:background="@drawable/rectangle"
+                    android:drawablePadding="6dp"
+                    android:drawableTint="#3F4043"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currently Working Here"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="End Month"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="End Year"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <Spinner
+                    android:id="@+id/spEndYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:height="60dp"
+                    android:background="@drawable/rectangle"
+                    android:drawablePadding="6dp"
+                    android:drawableTint="#3F4043"
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/spEndMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:height="60dp"
+                    android:background="@drawable/rectangle"
+                    android:drawablePadding="6dp"
+                    android:drawableTint="#3F4043"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deskripsi"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:height="60dp"
+                android:background="@drawable/rectangle"
+                android:drawablePadding="6dp"
+                android:drawableTint="#3F4043"
+                android:hint="@string/deskripsi"
+                android:padding="6dp"
+                android:textColorHint="#663F4043"
+                android:textSize="15sp"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:gravity="top|left"
+                android:scrollHorizontally="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:text="@string/btnsubmit_upper"
+                    android:padding="6dp"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:text="@string/btncancel_upper"
+                    android:padding="6dp"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

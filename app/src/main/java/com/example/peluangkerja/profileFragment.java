@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,12 +13,16 @@ import androidx.fragment.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.text.ParseException;
@@ -33,8 +38,11 @@ public class profileFragment extends Fragment {
     private Spinner spAge,spCategory,spExperience, spCurentSalary,spExpecSalary,spNationaly,spCountry,spState,
             spCity;
     private TextView etDate;
-    private View fragmentView;
+    private View fragmentView,bottom_sheet;
     private FragmentActivity myContext;
+    private BottomSheetBehavior sheetBehavior;
+    private BottomSheetDialog sheetDialog;
+    private ImageView imgExperience,imgEducation,imgLanguages;
 
     public profileFragment() {
         // Required empty public constructor
@@ -46,6 +54,7 @@ public class profileFragment extends Fragment {
         // Inflate the layout for this fragment
         fragmentView = inflater.inflate(R.layout.fragment_profile, container, false);
         initComponent();
+
         return fragmentView;
     }
 
@@ -60,6 +69,9 @@ public class profileFragment extends Fragment {
         spState = fragmentView.findViewById(R.id.spState_profile);
         spCity = fragmentView.findViewById(R.id.spCity_profile);
         etDate = fragmentView.findViewById(R.id.etDateOfBirth_Profile);
+        imgExperience = fragmentView.findViewById(R.id.img_experience);
+        imgEducation = fragmentView.findViewById(R.id.img_education);
+        imgLanguages = fragmentView.findViewById(R.id.img_languages);
         setSpinner(Arrays.asList(getResources().getStringArray(R.array.age)), spAge);
         setSpinner(Arrays.asList(getResources().getStringArray(R.array.categoryprofile)), spCategory);
         setSpinner(Arrays.asList(getResources().getStringArray(R.array.experienceprofile)), spExperience);
@@ -69,6 +81,20 @@ public class profileFragment extends Fragment {
         setSpinner(Arrays.asList(getResources().getStringArray(R.array.nationaly)), spCountry);
         setSpinner(Arrays.asList(getResources().getStringArray(R.array.state)), spState);
         setSpinner(Arrays.asList(getResources().getStringArray(R.array.city)), spCity);
+
+        bottom_sheet = fragmentView.findViewById(R.id.bottom_sheet);
+        sheetBehavior = BottomSheetBehavior.from(bottom_sheet);
+        imgExperience.setOnClickListener(view -> {
+            showBottomSheetDialog("Experience");
+        });
+
+        imgEducation.setOnClickListener(view -> {
+            showBottomSheetDialog("Education");
+        });
+        imgLanguages.setOnClickListener(view -> {
+            showBottomSheetDialog("Languages");
+        });
+
         etDate.setOnClickListener(view -> {
             Datepicker(etDate);
         });
@@ -105,4 +131,35 @@ public class profileFragment extends Fragment {
         datePickerDialog.show(getActivity().getFragmentManager(), "Datepickerdialog");
     }
 
+    private void showBottomSheetDialog(String data) {
+        View view = null;
+        if (data == "Experience"){
+            view = getLayoutInflater().inflate(R.layout.sheet_experience, null);
+        }else if (data == "Education"){
+            view = getLayoutInflater().inflate(R.layout.sheet_education, null);
+        }else if (data == "Languages"){
+            view = getLayoutInflater().inflate(R.layout.sheet_languages, null);
+        }
+
+        if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+            sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        }
+
+        view.findViewById(R.id.btnCancel).setOnClickListener(v -> {
+            sheetDialog.dismiss();
+        });
+        sheetDialog = new BottomSheetDialog(getContext());
+        sheetDialog.setContentView(view);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            sheetDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+
+        sheetDialog.show();
+        sheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                sheetDialog = null;
+            }
+        });
+    }
 }
