@@ -30,6 +30,7 @@
     <string name="fulladdres">Full Addres</string>
     <string name="btnupdate">Update</string>
     <string name="btnsubmit_upper">SUBMIT</string>
+    <string name="btnsave_upper">SAVE</string>
     <string name="btncancel_upper">CANCEL</string>
     <string name="education">Education</string>
     <string name="languages">Languages</string>

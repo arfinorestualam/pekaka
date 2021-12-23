@@ -1,18 +1,25 @@
-package com.example.peluangkerja;
+package com.example.peluangkerja.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -21,6 +28,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.peluangkerja.MainActivity;
+import com.example.peluangkerja.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
@@ -53,8 +62,9 @@ public class profileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         fragmentView = inflater.inflate(R.layout.fragment_profile, container, false);
+        setHasOptionsMenu(true);
         initComponent();
-
+        initToolbar();
         return fragmentView;
     }
 
@@ -124,7 +134,6 @@ public class profileFragment extends Fragment {
                     e.printStackTrace();
                 }
                 String formattedTime = sdf.format(date);
-                //tanggalString += formattedTime;
                 datetime.setText(formattedTime);
             }
         }, year, month, day);
@@ -161,5 +170,33 @@ public class profileFragment extends Fragment {
                 sheetDialog = null;
             }
         });
+    }
+
+    private void initToolbar() {
+        Toolbar toolbar = fragmentView.findViewById(R.id.toolbar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        ActionBar actionBar= ((AppCompatActivity)getActivity()).getSupportActionBar();
+        actionBar.setTitle("Profile");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#5baad9"));
+        }
+    }
+
+
+    //button back toolbar
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                Intent i = new Intent(getActivity(), MainActivity.class);
+                startActivity(i);
+                //getActivity().onBackPressed();
+                return true;
+        }
+        return true;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.peluangkerja;
+package com.example.peluangkerja.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,12 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.peluangkerja.Jobs;
+import com.example.peluangkerja.R;
+import com.example.peluangkerja.detailJob;
 
 import java.util.ArrayList;
 

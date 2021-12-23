@@ -3,16 +3,15 @@ package com.example.peluangkerja;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.peluangkerja.Fragment.homeFragment;
+import com.example.peluangkerja.Fragment.listJobFragment;
+import com.example.peluangkerja.Fragment.notificationFragment;
+import com.example.peluangkerja.Fragment.profileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 

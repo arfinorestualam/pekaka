@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     style="@style/Theme.AppCompat.DayNight.NoActionBar"
-    tools:context=".listJobFragment">
+    tools:context=".Fragment.listJobFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"

@@ -1,4 +1,4 @@
-package com.example.peluangkerja;
+package com.example.peluangkerja.Fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,18 +14,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.peluangkerja.Adapter.listJobAdapter;
+import com.example.peluangkerja.JobDatas;
+import com.example.peluangkerja.Jobs;
+import com.example.peluangkerja.R;
+
 import java.util.ArrayList;
 
 
-public class homeFragment extends Fragment {
-
-    private RecyclerView rvJob, rvRecomend;
+public class listJobFragment extends Fragment {
+    private RecyclerView rvJob;
     private ArrayList<Jobs> list = new ArrayList<>();
     private Activity view;
 
-    public homeFragment() {
+    public listJobFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle saveInstanceState){
@@ -36,25 +41,18 @@ public class homeFragment extends Fragment {
         list.addAll(JobDatas.getJobList());
         LinearLayoutManager lm = new LinearLayoutManager(getActivity());
         rvJob.setLayoutManager(new LinearLayoutManager(getActivity()));
-        listJobHomeAdapter jobAdapter = new listJobHomeAdapter(JobDatas.getJobList(), getActivity());
+        listJobAdapter jobAdapter = new listJobAdapter(JobDatas.getJobList(), getActivity());
         rvJob.addItemDecoration(new DividerItemDecoration(rvJob.getContext(), lm.getOrientation()));
         rvJob.setAdapter(jobAdapter);
-
-        rvRecomend = view.findViewById(R.id.rvRecomendedJob);
-        rvRecomend.setHasFixedSize(true);
-
-        LinearLayoutManager lm2 = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
-        rvRecomend.setLayoutManager(lm2);
-        listRecomededJobAdapter jobAdapter2 = new listRecomededJobAdapter(JobDatas.getJobList(), getActivity());
-        rvRecomend.addItemDecoration(new DividerItemDecoration(rvRecomend.getContext(), lm2.getOrientation()));
-        rvRecomend.setAdapter(jobAdapter2);
     };
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_list_job, container, false);
+
+
     }
+
 }

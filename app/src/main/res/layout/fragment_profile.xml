@@ -5,14 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/Theme.AppCompat.DayNight.NoActionBar"
-    tools:context=".profileFragment"
+    tools:context=".Fragment.profileFragment"
     android:theme="@style/SplashTheme"
     android:background="@drawable/gradient_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#5baad9"
+                style="@style/Theme.AppCompat.Light">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <!-- TODO: Update blank fragment layout -->
    <ScrollView
        android:layout_width="match_parent"
-       android:layout_height="match_parent">
+       android:layout_height="match_parent"
+       android:layout_marginTop="55dp">
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"

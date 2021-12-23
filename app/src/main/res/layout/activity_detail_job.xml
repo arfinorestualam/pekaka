@@ -1,89 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".detailJob"
-    android:theme="@style/SplashTheme"
     android:orientation="vertical">
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="268dp"
-        android:id="@+id/imgJob"
-        android:background="@drawable/imgjob"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="13dp"
-        android:textColor="#0277BD"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:id="@+id/tvJob"
-        android:text="Socialmedia Specialist"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginStart="13dp"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:id="@+id/tvCompany"
-        android:text="PT. Makarona Indonesia"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:layout_marginStart="13dp"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        android:id="@+id/tvPaid"
-        android:text="Gaji Rp. 4.000.000 - 6.000.000"/>
 
-    <RelativeLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="2dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:layout_marginStart="13dp"
-            android:textColor="#000000"
-            android:textSize="8sp"
-            android:layout_alignParentLeft="true"
-            android:id="@+id/tvCity"
-            android:text="Kab. Bogor"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="13dp"
-            android:textColor="#000000"
-            android:textSize="8sp"
-            android:layout_alignParentRight="true"
-            android:id="@+id/tvTimePost"
-            android:text="20 menit yang lalu"/>
+        style="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-    </RelativeLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginStart="13dp"
-        android:textColor="#0277BD"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:text="Kualifikasi"/>
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lvQualif"
-        android:layout_marginTop="3dp"
-        android:layout_marginStart="13dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#5baad9"
+                style="@style/Theme.AppCompat.Light">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="268dp"
+                android:id="@+id/imgJob"
+                android:background="@drawable/imgjob" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="13dp"
+                android:textColor="#0277BD"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvJob"
+                android:text="Socialmedia Specialist"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="13dp"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:id="@+id/tvCompany"
+                android:text="PT. Makarona Indonesia"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="13dp"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:id="@+id/tvPaid"
+                android:text="Gaji Rp. 4.000.000 - 6.000.000"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginStart="13dp"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/tvCity"
+                    android:text="Kab. Bogor"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="13dp"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tvTimePost"
+                    android:text="20 menit yang lalu"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="13dp"
+                android:textColor="#0277BD"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Kualifikasi"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:id="@+id/lvQualif"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="13dp"
+                android:animationCache="false"
+                android:minHeight="300dp"
+                android:divider="@null"
+                android:scrollingCache="false"
+                android:smoothScrollbar="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:text="@string/btnsave_upper"
+                    android:padding="6dp"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:text="@string/btnsubmit_upper"
+                    android:padding="6dp"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="50dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/facebook"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/instagram"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
