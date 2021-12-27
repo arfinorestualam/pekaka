@@ -1,6 +1,7 @@
 package com.example.peluangkerja.Fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,12 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.peluangkerja.Adapter.listJobHomeAdapter;
 import com.example.peluangkerja.Adapter.listRecomededJobAdapter;
 import com.example.peluangkerja.JobDatas;
 import com.example.peluangkerja.Jobs;
+import com.example.peluangkerja.MainActivity;
 import com.example.peluangkerja.R;
+import com.example.peluangkerja.loginActivity;
 
 import java.util.ArrayList;
 
@@ -28,7 +32,7 @@ public class homeFragment extends Fragment {
     private RecyclerView rvJob, rvRecomend;
     private ArrayList<Jobs> list = new ArrayList<>();
     private Activity view;
-
+    private ImageView btnLogout;
     public homeFragment() {
         // Required empty public constructor
     }
@@ -36,7 +40,7 @@ public class homeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle saveInstanceState){
         super.onViewCreated(view,saveInstanceState);
-
+        btnLogout = view.findViewById(R.id.btnLogout);
         rvJob = view.findViewById(R.id.rvListJob);
         rvJob.setHasFixedSize(true);
         list.addAll(JobDatas.getJobList());
@@ -54,6 +58,13 @@ public class homeFragment extends Fragment {
         listRecomededJobAdapter jobAdapter2 = new listRecomededJobAdapter(JobDatas.getJobList(), getActivity());
         rvRecomend.addItemDecoration(new DividerItemDecoration(rvRecomend.getContext(), lm2.getOrientation()));
         rvRecomend.setAdapter(jobAdapter2);
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), loginActivity.class));
+            }
+        });
     };
 
 

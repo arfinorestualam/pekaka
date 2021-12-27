@@ -124,22 +124,22 @@
         android:layout_marginStart="205.5dp"
         android:layout_marginTop="483dp"
         android:background="@color/white_imperfect" />
+
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFacebook"
         android:layout_width="311dp"
-        android:layout_marginTop="508dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
+        android:layout_marginTop="508dp"
         android:backgroundTint="#4460A0"
         android:drawableLeft="@drawable/facebook"
+        android:fontFamily="@font/montserrat"
         android:gravity="start|center"
         android:text="Masuk dengan Facebook"
         android:textAlignment="center"
-        android:fontFamily="@font/montserrat"
         android:textStyle="bold"
-        app:cornerRadius="6dp"
-        android:id="@+id/btnFacebook"
-        />
+        app:cornerRadius="6dp" />
     <com.google.android.material.button.MaterialButton
         android:layout_width="311dp"
         android:layout_marginTop="554dp"
@@ -174,22 +174,32 @@
         app:cornerRadius="6dp"
         android:id="@+id/btnLinkedin"
         />
-    <TextView
-        android:id="@+id/tvDaftar"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="670dp"
-        android:textSize="12sp"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#FFFFFF"
-        android:text="@string/belum_punya_akun"/>
+        android:layout_marginTop="670dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/belum_punya_akun"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
 
+        <TextView
+            android:id="@+id/tvDaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/disini"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
 
-
-
-
+    </LinearLayout>
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">PeluangKerja</string>
-    <string name="belum_punya_akun">Belum punya akun ? daftar <b><u>disini</u></b></string>
+    <string name="belum_punya_akun">Belum punya akun ? daftar</string>
+    <string name="disini"><b><u>disini</u></b></string>
     <string name="title_home"><font fgcolor='#5BABD9'>Beranda</font></string>
     <string name="title_dashboard"><font fgcolor='#5BABD9'>Jobs</font></string>
     <string name="title_notifications"><font fgcolor='#5BABD9'>null</font></string>
